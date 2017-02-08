@@ -1,0 +1,110 @@
+#header{
+  height:80px;
+  line-height: 80px;
+  width:100%;
+  border-top: 1px solid #e3e7e8;
+  border-bottom: 1px solid #e3e7e8;
+}
+.linehei-80{line-height: 80px; height: 80px;}
+.slides{float: left;}
+.slides img{padding: 15px; max-width: auto;height:auto;}
+.right li a{color: #333;}
+.padd-10{width:200px;display: block;}
+.margin-l{width:100%;}
+
+
+.main-banner{
+    position: relative;
+    width: 100%;
+    padding: 19px 0 24px;
+    height:484px;
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+.fiex-viedo{
+      width: 980px;
+      margin: 0 auto;
+      position: relative;
+      min-width: auto;
+      overflow-x: hidden;
+      z-index: 2;
+}
+.flash-viedo{
+    position: relative;
+    min-width: auto;
+    overflow-y: hidden;
+    width: 783px;
+    height: 441px;
+    float: left;
+    -webkit-box-shadow: 1px 1px 10px 0 rgba(0,0,0,.75);
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.75);
+}
+.small-pic-container{
+  width: 190px;
+  height: 441px;
+  position: absolute;
+  right: 0;
+  padding-top: 5px;
+  background: rgba(0,0,0,.8);
+  background: #000\0;
+}
+.video-main{
+            width: 100%;
+           height: 100%;
+           background:transparent url('../static/images/loading.gif') 50% 50% no-repeat;
+           -webkit-background-size:cover;
+           -moz-background-size:cover;
+           -o-background-size:cover;
+           background-size:cover;
+}
+
+.main_visual{height:200px;border-top:1px solid #d7d7d7;overflow:hidden;position:relative;}
+.main_image{height:200px;overflow:hidden;position:relative;}
+.main_image ul{width:9999px;height:200px;overflow:hidden;position:absolute;top:0;left:0}
+.main_image li{float:left;width:100%;height:200px;}
+.main_image li span{display:block;width:100%;height:200px}
+.main_image li a{display:block;width:100%;height:200px}
+div.flicking_con{position:absolute;top:360px;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;}
+div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../images/btn_main_img.png') 0 0 no-repeat;display:block;text-indent:-1000px}
+div.flicking_con a.on{background-position:0 -21px}
+#btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
+#btn_prev{background:url(../images/hover_left.png) no-repeat left top;left:100px;}
+#btn_next{background:url(../images/hover_right.png) no-repeat right top;right:100px;}
+
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+  .main-banner{
+    height:150px;
+  }
+  .flash-viedo{
+    height: 200px;
+    position: relative;
+    top: 0;
+    width: 414px;
+  }
+  .video-main{height: 200px;}
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 3px;
+    height: 3px;
+    background-color: #F5F5F5;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
