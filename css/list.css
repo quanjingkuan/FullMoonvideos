@@ -1,0 +1,101 @@
+#header{
+  height:80px;
+  line-height: 80px;
+  width:100%;
+  border-top: 1px solid #e3e7e8;
+  border-bottom: 1px solid #e3e7e8;
+}
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+li{list-style: none;}
+ main {
+   flex: 1 0 auto;
+ }
+ .qq{
+
+   height: 30px;width: 30px;display: block;
+   background: url(../static/images/icos.png) #fff;
+       background-repeat: no-repeat;
+       display: inline-block;
+      position: relative;
+       background-position: -76px -65px;
+       background-size: 150px 150px;
+
+ }
+ .gototop{height: 30px;width: 30px;display: block;background-color: #eee;text-align: center;line-height: 30px;}
+.linehei-80{line-height: 80px; height: 80px;}
+.slides{float: left;}
+.slides img{padding: 15px; max-width: auto;height:auto;}
+.right li a{color: #333;}
+.padd-10{width:200px;display: block;}
+.margin-l{width:100%;}
+
+.sideleft{width: 185px;background: #fff;color: #666}
+.menu ul {margin: 0;padding-top: 0;border: 1px solid #35b558;}
+.menu ul li {
+  width: 100%;
+  padding-left: 20px;
+  line-height: 30px;
+  border-bottom: 1px solid #e3e3e3;
+  height: 35px;
+  background: url('http://s16.mogucdn.com/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png') no-repeat 267px 18px;
+  position: relative;
+}
+.menu ul li a{color: #666}
+.top{
+  width: 100%;
+  height: 1px;
+  display: none;
+  background: #35b558;
+  position: absolute;
+  left: 0;
+  z-index: 21;
+  top: -1px;
+
+}
+.bottom{
+  width: 100%;
+  height: 1px;
+  background: #35b558;
+  position: absolute;
+  z-index: 21;
+  left: 0;
+  display: none;
+  bottom: -1px;
+
+}
+.right{
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  z-index: 21;
+  right: -1px;
+  display: none;
+  top: 0;
+}
+.navd{
+  width: 249px;
+  height: 251px;
+  background: #fff;
+  border: 1px solid #35b558;
+  z-index: 21;
+  display: none;
+  position: absolute;
+  right: -251px;
+  top: -1px;
+
+}
+
+.title{
+  padding-left: 20px;
+  z-index: 21;
+  color: #fff;
+  font-size: 12px;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+}

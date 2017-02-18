@@ -5,6 +5,27 @@
   border-top: 1px solid #e3e7e8;
   border-bottom: 1px solid #e3e7e8;
 }
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+ .qq{
+
+   height: 30px;width: 30px;display: block;
+   background: url(../static/images/icos.png) #fff;
+       background-repeat: no-repeat;
+       display: inline-block;
+      position: relative;
+       background-position: -76px -65px;
+       background-size: 150px 150px;
+
+ }
+ .gototop{height: 30px;width: 30px;display: block;background-color: #eee;text-align: center;line-height: 30px;}
 .linehei-80{line-height: 80px; height: 80px;}
 .slides{float: left;}
 .slides img{padding: 15px; max-width: auto;height:auto;}
@@ -27,7 +48,7 @@
       margin: 0 auto;
       position: relative;
       min-width: auto;
-      overflow-x: hidden;
+      overflow: hidden;
       z-index: 2;
 }
 .flash-viedo{
@@ -37,17 +58,33 @@
     width: 783px;
     height: 441px;
     float: left;
-    -webkit-box-shadow: 1px 1px 10px 0 rgba(0,0,0,.75);
-    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.75);
 }
 .small-pic-container{
   width: 190px;
   height: 441px;
   position: absolute;
   right: 0;
-  padding-top: 5px;
+  /*padding-top: 5px;
   background: rgba(0,0,0,.8);
-  background: #000\0;
+  background: #000\0;*/
+}
+.small-pic-container ul{
+  margin-top:-5px;
+  padding:0;
+  border: none;
+}
+.small-pic-container ul li{
+  display: inline-block;
+  margin-bottom: 5px;
+  height: 110px;
+  border-right: none;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 0;
+}
+.small-pic-container ul li img{
+  height: 110px;
+  border: none;
 }
 .video-main{
             width: 100%;
@@ -59,23 +96,84 @@
            background-size:cover;
 }
 
-.main_visual{height:200px;border-top:1px solid #d7d7d7;overflow:hidden;position:relative;}
-.main_image{height:200px;overflow:hidden;position:relative;}
-.main_image ul{width:9999px;height:200px;overflow:hidden;position:absolute;top:0;left:0}
-.main_image li{float:left;width:100%;height:200px;}
-.main_image li span{display:block;width:100%;height:200px}
-.main_image li a{display:block;width:100%;height:200px}
-div.flicking_con{position:absolute;top:360px;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;}
-div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../images/btn_main_img.png') 0 0 no-repeat;display:block;text-indent:-1000px}
-div.flicking_con a.on{background-position:0 -21px}
-#btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
-#btn_prev{background:url(../images/hover_left.png) no-repeat left top;left:100px;}
-#btn_next{background:url(../images/hover_right.png) no-repeat right top;right:100px;}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
 
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+.prev{
+  display: block;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 250%;
+  line-height: 30px;
+  position: absolute;
+  top:25%;
+  z-index: 33;
+}
+.next{
+  display: block;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 250%;
+  line-height: 30px;
+  position: absolute;
+  top:25%;
+  right: 0;
+  z-index: 33;
+}
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+
+  height: 220px;
+  border: 0;
+  }
+.left-big-img{
+  overflow: hidden;
+}
+.left-big-img a img{
+  height: 400px;
+  max-width: 100%;
+
+}
+.s1{}
+.s1 img{
+  height: 195px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+#pb-0{padding-bottom: 0;}
+#pr-0{padding-right: 0;}
 @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
   .main-banner{
     height:150px;
   }
+  .uk-sticky-placeholder{display: none;}
   .flash-viedo{
     height: 200px;
     position: relative;
@@ -84,7 +182,15 @@ div.flicking_con a.on{background-position:0 -21px}
   }
   .video-main{height: 200px;}
 }
+@media only screen and (min-device-width: 320px)and (-webkit-min-device-pixel-ratio: 2) {
+        .rslides img {
+          height: 150px;
+        }
+}
 
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
